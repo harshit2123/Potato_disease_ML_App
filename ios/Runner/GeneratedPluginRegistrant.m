@@ -18,11 +18,18 @@
 @import permission_handler_apple;
 #endif
 
+#if __has_include(<tensorflow_lite_flutter/TflitePlugin.h>)
+#import <tensorflow_lite_flutter/TflitePlugin.h>
+#else
+@import tensorflow_lite_flutter;
+#endif
+
 @implementation GeneratedPluginRegistrant
 
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
   [CameraPlugin registerWithRegistrar:[registry registrarForPlugin:@"CameraPlugin"]];
   [PermissionHandlerPlugin registerWithRegistrar:[registry registrarForPlugin:@"PermissionHandlerPlugin"]];
+  [TflitePlugin registerWithRegistrar:[registry registrarForPlugin:@"TflitePlugin"]];
 }
 
 @end

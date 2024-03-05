@@ -38,6 +38,7 @@ dependencies:
   camera: ^0.10.5+9
   image: ^4.1.7
   permission_handler: ^11.3.0
+  tensorflow_lite_flutter: ^2.0.1
 
 dev_dependencies:
   flutter_test:

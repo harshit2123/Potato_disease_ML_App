@@ -30,5 +30,10 @@ public final class GeneratedPluginRegistrant {
     } catch (Exception e) {
       Log.e(TAG, "Error registering plugin permission_handler_android, com.baseflow.permissionhandler.PermissionHandlerPlugin", e);
     }
+    try {
+      flutterEngine.getPlugins().add(new sq.flutter.tflite.TflitePlugin());
+    } catch (Exception e) {
+      Log.e(TAG, "Error registering plugin tensorflow_lite_flutter, sq.flutter.tflite.TflitePlugin", e);
+    }
   }
 }
